@@ -2,6 +2,8 @@ import InnerPageHero from '../../components/InnerPageHero';
 import ServiceIntro from '../../components/ServiceIntro';
 import { CheckCircle, CircleDollarSign, TrendingUp, BarChart3, Target, Users, Award, Clock, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import fractionalCfo from '../../assets/Services/CFO-Leadership.jpg';
+import fractionalCfo2 from '../../assets/Services/Why-Choose-a-Fractional-CFO.jpg';
 
 export default function FractionalCFO() {
   const features = [
@@ -58,7 +60,7 @@ export default function FractionalCFO() {
               "From financial planning and analysis to fundraising support and investor relations, our experienced CFOs bring executive-level expertise to your business on a flexible, part-time basis.",
               "Whether you're scaling rapidly, seeking investment, or need strategic financial guidance, our fractional CFO services give you the leadership you need at a fraction of the cost."
             ]}
-            image="https://images.unsplash.com/photo-1698762954345-0c4d58f79b1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwQ04lMjBUb3dlciUyMGJ1c2luZXNzfGVufDF8fHx8MTc2MjE1NjgxOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            image={fractionalCfo}
             imageAlt="Fractional CFO Services"
             stats={[
               { icon: Users, value: '50+', label: 'Companies Served' },
@@ -100,7 +102,7 @@ export default function FractionalCFO() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
               <img
-                src="https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBidXNpbmVzcyUyMG1lZXRpbmd8ZW58MXx8fHwxNzYxNzIyNjI2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src={fractionalCfo2}
                 alt="Fractional CFO"
                 className="rounded-2xl shadow-xl"
               />

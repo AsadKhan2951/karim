@@ -2,6 +2,8 @@ import InnerPageHero from '../../components/InnerPageHero';
 import ServiceIntro from '../../components/ServiceIntro';
 import { CheckCircle, BarChart3, FileText, PieChart, TrendingUp, Users, Award, Clock, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import taxReporting from '../../assets/Services/Financial-Insights.jpg';
+import taxReporting2 from '../../assets/Services/Why-Financial-Reporting-Matters.jpg';
 
 export default function FinancialReporting() {
   const features = [
@@ -58,7 +60,7 @@ export default function FinancialReporting() {
               "Our comprehensive financial reporting services deliver clear, professional statements that tell the story of your business performance. From income statements to custom analytics, we provide the data you need.",
               "Whether you need monthly reports for management or annual statements for stakeholders, our expert team ensures your financial reporting is accurate, timely, and meaningful."
             ]}
-            image="https://images.unsplash.com/photo-1613316806864-86d8e77de03a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwZmluYW5jaWFsJTIwZGlzdHJpY3R8ZW58MXx8fHwxNzYyMTU2ODE4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            image={taxReporting}
             imageAlt="Financial Reporting Services"
             stats={[
               { icon: Users, value: '250+', label: 'Reports Delivered' },
@@ -100,7 +102,7 @@ export default function FinancialReporting() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
               <img
-                src="https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBidXNpbmVzcyUyMG1lZXRpbmd8ZW58MXx8fHwxNzYxNzIyNjI2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src={taxReporting2}
                 alt="Financial Reporting"
                 className="rounded-2xl shadow-xl"
               />

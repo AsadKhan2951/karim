@@ -2,6 +2,8 @@ import InnerPageHero from '../../components/InnerPageHero';
 import ServiceIntro from '../../components/ServiceIntro';
 import { CheckCircle, Target, BarChart3, TrendingUp, PieChart, Users, Award, Clock, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import taxReporting from '../../assets/Services/Financial-Insights.jpg';
+import taxReporting2 from '../../assets/Services/Why-Budgeting-&-Forecasting-Matter.jpg';
 
 export default function Budgeting() {
   const features = [
@@ -58,7 +60,7 @@ export default function Budgeting() {
               "From developing detailed budgets to creating sophisticated financial forecasts, we provide the tools and insights you need to plan for growth, identify opportunities, and navigate challenges before they arise.",
               "Whether you're planning for expansion, managing seasonal fluctuations, or seeking investment, our budgeting and forecasting services give you the clarity and control to achieve your business goals."
             ]}
-            image="https://images.unsplash.com/photo-1560428969-34a7bb7917f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwbW9kZXJuJTIwb2ZmaWNlJTIwaW50ZXJpb3J8ZW58MXx8fHwxNzYyMTU2ODIwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            image={taxReporting}
             imageAlt="Budgeting & Forecasting Services"
             stats={[
               { icon: Users, value: '150+', label: 'Budgets Created' },
@@ -100,7 +102,7 @@ export default function Budgeting() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
               <img
-                src="https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBidXNpbmVzcyUyMG1lZXRpbmd8ZW58MXx8fHwxNzYxNzIyNjI2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src={taxReporting2}
                 alt="Budgeting & Forecasting"
                 className="rounded-2xl shadow-xl"
               />

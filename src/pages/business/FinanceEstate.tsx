@@ -1,6 +1,7 @@
 import InnerPageHero from '../../components/InnerPageHero';
 import { CheckCircle, Landmark, Shield, TrendingUp, FileText, Users, LineChart } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import incorporation1 from '../../assets/Business/Why-Plan-Your-Financial-Future.jpg';
 
 export default function FinanceEstate() {
   const features = [
@@ -91,7 +92,7 @@ export default function FinanceEstate() {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1598139384902-5a8217874645?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBhZHZpc29yfGVufDF8fHx8MTc2MTc4MzM1N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src={incorporation1}
                 alt="Finance & Estate Planning"
                 className="rounded-2xl shadow-xl"
               />

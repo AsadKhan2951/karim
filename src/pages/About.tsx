@@ -91,7 +91,7 @@ export default function About() {
               <img
                 src={KarimHeadImg}
                 alt="Ahmad Karim - Karim Accounting"
-                className="rounded-2xl shadow-xl w-full h-auto object-cover"
+                className="rounded-2xl shadow-xl w-full h-auto karim-head-img"
               />
             </div>
           </div>

@@ -2,6 +2,8 @@ import InnerPageHero from '../../components/InnerPageHero';
 import ServiceIntro from '../../components/ServiceIntro';
 import { CheckCircle, TrendingUp, Shield, Calculator, FileText, Users, Award, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import taxAdvisory from '../../assets/Services/Tax-Planning.jpg';
+import taxAdvisory2 from '../../assets/Services/Why-Proactive-Tax-Planning-Matters.jpg';
 
 export default function TaxAdvisory() {
   const features = [
@@ -58,7 +60,7 @@ export default function TaxAdvisory() {
               "From tax optimization strategies to compliance advisory, we provide comprehensive tax planning that keeps you ahead of the curve. Our experts stay current with the latest tax laws and regulations to ensure you benefit from every available opportunity.",
               "Whether you're planning a major business decision or looking to optimize your tax position, our strategic tax advisory services provide the insights and guidance you need to make informed financial choices."
             ]}
-            image="https://images.unsplash.com/photo-1594837447247-8bfc126ff9d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwc2t5bGluZSUyMGJ1c2luZXNzJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc2MjE1NjgxNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            image={taxAdvisory}
             imageAlt="Tax Advisory Services"
             stats={[
               { icon: Users, value: '600+', label: 'Clients Advised' },
@@ -100,7 +102,7 @@ export default function TaxAdvisory() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
               <img
-                src="https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBidXNpbmVzcyUyMG1lZXRpbmd8ZW58MXx8fHwxNzYxNzIyNjI2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src={taxAdvisory2}
                 alt="Tax Advisory"
                 className="rounded-2xl shadow-xl"
               />

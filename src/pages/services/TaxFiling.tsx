@@ -2,6 +2,8 @@ import InnerPageHero from '../../components/InnerPageHero';
 import ServiceIntro from '../../components/ServiceIntro';
 import { CheckCircle, FileText, Clock, Shield, Calculator, TrendingUp, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import taxFilling from '../../assets/Services/Tax-Filing.jpg';
+import taxFilling2 from '../../assets/Services/Why-Professional-Tax-Filing-Matters.jpg';
 
 export default function TaxFiling() {
   const features = [
@@ -58,7 +60,7 @@ export default function TaxFiling() {
               "From personal income tax returns to complex corporate filings, we handle every aspect with precision and care. Our experienced team stays up-to-date with the latest CRA requirements and tax legislation.",
               "Whether you're filing for the first time or need ongoing tax support, we're here to make the process smooth, stress-free, and optimized for your financial benefit."
             ]}
-            image="https://images.unsplash.com/photo-1586486855514-8c633cc6fd38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDYW5hZGlhbiUyMHRheCUyMGRvY3VtZW50cyUyMHBsYW5uaW5nfGVufDF8fHx8MTc2MjE1NjgyMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            image={taxFilling}
             imageAlt="Tax Filing Services"
             stats={[
               { icon: Users, value: '1000+', label: 'Tax Returns Filed' },
@@ -100,7 +102,7 @@ export default function TaxFiling() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
               <img
-                src="https://images.unsplash.com/photo-1758876202430-a0595cf17d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZXJzb25hbCUyMGZpbmFuY2UlMjBwbGFubmluZyUyMGRlc2t8ZW58MXx8fHwxNzYxODUyNjc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src={taxFilling2}
                 alt="Tax Filing"
                 className="rounded-2xl shadow-xl"
               />

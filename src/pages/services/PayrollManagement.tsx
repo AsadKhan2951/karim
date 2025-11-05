@@ -2,6 +2,8 @@ import InnerPageHero from '../../components/InnerPageHero';
 import ServiceIntro from '../../components/ServiceIntro';
 import { CheckCircle, Users, FileCheck, Calendar, DollarSign, Shield, Clock, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import PayrollManagment from '../../assets/Services/Payroll-Management.jpg';
+import PayrollManagment2 from '../../assets/Services/Simplify-Your-Payroll-Process.jpg';
 
 export default function PayrollManagement() {
   const features = [
@@ -58,7 +60,7 @@ export default function PayrollManagement() {
               "From employee onboarding to year-end tax forms, we manage every detail of your payroll process with accuracy and efficiency. Our automated systems ensure your employees are paid correctly and on time, every time.",
               "Whether you have 5 employees or 500, our scalable payroll solutions grow with your business while maintaining the same high level of service and attention to detail."
             ]}
-            image="https://images.unsplash.com/photo-1560428969-34a7bb7917f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwbW9kZXJuJTIwb2ZmaWNlJTIwaW50ZXJpb3J8ZW58MXx8fHwxNzYyMTU2ODIwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            image={PayrollManagment}
             imageAlt="Payroll Management Services"
             stats={[
               { icon: Users, value: '400+', label: 'Employees Managed' },
@@ -100,7 +102,7 @@ export default function PayrollManagement() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
               <img
-                src="https://images.unsplash.com/photo-1665072204431-b3ba11bd6d06?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGhhbmRzaGFrZSUyMGRpdmVyc2V8ZW58MXx8fHwxNzYxODEzMjk5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src={PayrollManagment2}
                 alt="Payroll Management"
                 className="rounded-2xl shadow-xl"
               />

@@ -2,6 +2,8 @@ import InnerPageHero from '../../components/InnerPageHero';
 import ServiceIntro from '../../components/ServiceIntro';
 import { CheckCircle, Calculator, FileText, BarChart3, TrendingUp, Shield, Clock, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import fullCycleAccounting from '../../assets/Services/full-cycle-accounting.jpg';
+import fullCycleAccounting2 from '../../assets/Services/Why-Choose-Full-Cycle-Accounting.jpg';
 
 export default function FullCycleAccounting() {
   const features = [
@@ -58,7 +60,7 @@ export default function FullCycleAccounting() {
               "From recording transactions to preparing financial statements, we handle every step of your accounting cycle with precision and professionalism. Our systematic approach ensures nothing falls through the cracks.",
               "Whether you're a growing startup or an established business, our full cycle accounting services provide the foundation you need for financial success and strategic planning."
             ]}
-            image="https://images.unsplash.com/photo-1613155961736-d0782a58f170?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDYW5hZGlhbiUyMGJ1c2luZXNzJTIwYWNjb3VudGluZyUyMG9mZmljZXxlbnwxfHx8fDE3NjIxNTY4MTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            image={fullCycleAccounting}
             imageAlt="Full Cycle Accounting Services"
             stats={[
               { icon: Users, value: '200+', label: 'Businesses Served' },
@@ -100,7 +102,7 @@ export default function FullCycleAccounting() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
               <img
-                src="https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBidXNpbmVzcyUyMG1lZXRpbmd8ZW58MXx8fHwxNzYxNzIyNjI2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src={fullCycleAccounting2}
                 alt="Full Cycle Accounting"
                 className="rounded-2xl shadow-xl"
               />

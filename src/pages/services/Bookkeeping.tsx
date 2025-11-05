@@ -2,7 +2,8 @@ import InnerPageHero from '../../components/InnerPageHero';
 import ServiceIntro from '../../components/ServiceIntro';
 import { CheckCircle, BookOpen, FileText, Database, TrendingUp, Calendar, Users, Award, Clock, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import bookkeepingImage from 'figma:asset/111d644b9c67f5e792144571a0d3d42c2ff80a4c.png';
+import bookkeepingImage from '../../assets/Services/Bookkeeping.jpg';
+import bookkeepingImage2 from '../../assets/Services/Why-Professional-Bookkeeping-Matters.jpg';
 
 export default function Bookkeeping() {
   const features = [
@@ -59,7 +60,7 @@ export default function Bookkeeping() {
               "From daily transaction recording to monthly financial statements, we handle every aspect of your bookkeeping with precision and professionalism. Our cloud-based systems provide you with real-time access to your financial data.",
               "Whether you're a small startup or an established business, our comprehensive bookkeeping services help you stay organized, save time, and focus on what you do best—growing your business."
             ]}
-            image="https://images.unsplash.com/photo-1654140140199-fd32282377ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwcHJvZmVzc2lvbmFsJTIwYWNjb3VudGluZyUyMHdvcmtzcGFjZSUyMGxhcHRvcHxlbnwxfHx8fDE3NjIxNTY5Mjh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            image={bookkeepingImage}
             imageAlt="Bookkeeping Services"
             stats={[
               { icon: Users, value: '300+', label: 'Active Clients' },
@@ -101,7 +102,7 @@ export default function Bookkeeping() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
               <img
-                src={bookkeepingImage}
+                src={bookkeepingImage2}
                 alt="Professional bookkeeping with calculator and financial reports"
                 className="rounded-2xl shadow-xl"
               />

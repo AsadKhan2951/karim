@@ -1,6 +1,7 @@
 import InnerPageHero from '../../components/InnerPageHero';
 import { CheckCircle, Building, FileText, Scale, Shield, Clock, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import incorporation1 from '../../assets/Business/Why-Incorporate-Your-Business.jpg';
 
 export default function Incorporation() {
   const features = [
@@ -91,7 +92,7 @@ export default function Incorporation() {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBidXNpbmVzcyUyMG1lZXRpbmd8ZW58MXx8fHwxNzYxNzIyNjI2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src={incorporation1}
                 alt="Business Incorporation"
                 className="rounded-2xl shadow-xl"
               />
