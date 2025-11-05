@@ -1,4 +1,4 @@
-import Hero from '../../components/Hero';
+import InnerPageHero from '../../components/InnerPageHero';
 import ServiceIntro from '../../components/ServiceIntro';
 import { CheckCircle, TrendingUp, Shield, Calculator, FileText, Users, Award, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -38,13 +38,14 @@ export default function TaxAdvisory() {
 
   return (
     <div>
-      <Hero
+      <InnerPageHero
         title="Tax Planning & Advisory Services"
         subtitle="Smart tax-saving strategies. Our tax advisory services help you minimize tax liability through proactive planning, strategic guidance, and expert knowledge of tax laws."
         ctaText="Get Started"
         ctaLink="/contact"
-        image="https://images.unsplash.com/photo-1594837447247-8bfc126ff9d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwc2t5bGluZSUyMGJ1c2luZXNzJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc2MjE1NjgxNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-        compact
+        secondaryCtaText="(905) 607-7778"
+        secondaryCtaLink="tel:9056077778"
+        backgroundImage="https://images.unsplash.com/photo-1516468851383-af0e988c3782?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwY2l0eXNjYXBlJTIwZHVza3xlbnwxfHx8fDE3NjIzNDcyNzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       />
 
       {/* Service Introduction - New Dynamic Section */}

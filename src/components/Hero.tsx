@@ -13,7 +13,7 @@ interface HeroProps {
 
 export default function Hero({ title, subtitle, ctaText, ctaLink, image, compact = false }: HeroProps) {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-[#0052D4] via-[#1a1f5c] to-[#4364F7] min-h-[calc(100vh-80px)] md:min-h-screen pt-20 md:pt-24">
+    <div className={`relative overflow-hidden bg-gradient-to-br from-[#0052D4] via-[#1a1f5c] to-[#4364F7] ${compact ? 'min-h-[50vh] md:min-h-[60vh]' : 'min-h-[calc(100vh-80px)] md:min-h-screen'} pt-20 md:pt-24`}>
       {/* Blurred Background Orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-purple-500 rounded-full blur-[120px] opacity-40 animate-pulse"></div>

@@ -1,4 +1,4 @@
-import Hero from '../../components/Hero';
+import InnerPageHero from '../../components/InnerPageHero';
 import ServiceIntro from '../../components/ServiceIntro';
 import { CheckCircle, FileText, Clock, Shield, Calculator, TrendingUp, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -38,13 +38,14 @@ export default function TaxFiling() {
 
   return (
     <div>
-      <Hero
+      <InnerPageHero
         title="Tax Filing Services"
         subtitle="Fast, accurate tax submissions. We handle all aspects of tax preparation and filing for individuals and businesses, ensuring compliance and maximizing your tax benefits."
         ctaText="Get Started"
         ctaLink="/contact"
-        image="https://images.unsplash.com/photo-1586486855514-8c633cc6fd38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDYW5hZGlhbiUyMHRheCUyMGRvY3VtZW50cyUyMHBsYW5uaW5nfGVufDF8fHx8MTc2MjE1NjgyMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-        compact
+        secondaryCtaText="(905) 607-7778"
+        secondaryCtaLink="tel:9056077778"
+        backgroundImage="https://images.unsplash.com/photo-1729942617623-232ac1b78921?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwc3Vuc2V0JTIwY2l0eXNjYXBlfGVufDF8fHx8MTc2MjM0NzI3Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       />
 
       {/* Service Introduction - New Dynamic Section */}

@@ -1,4 +1,4 @@
-import Hero from '../../components/Hero';
+import InnerPageHero from '../../components/InnerPageHero';
 import { CheckCircle, Landmark, Shield, TrendingUp, FileText, Users, LineChart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -37,13 +37,14 @@ export default function FinanceEstate() {
 
   return (
     <div>
-      <Hero
+      <InnerPageHero
         title="Finance & Estate Planning"
         subtitle="Secure your financial future and protect your legacy. Our comprehensive planning services help you build wealth, minimize taxes, and ensure smooth wealth transfer to future generations."
         ctaText="Get Started"
         ctaLink="/contact"
-        image="https://images.unsplash.com/photo-1613316806864-86d8e77de03a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwZmluYW5jaWFsJTIwZGlzdHJpY3R8ZW58MXx8fHwxNzYyMTU2ODE4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-        compact
+        secondaryCtaText="(905) 607-7778"
+        secondaryCtaLink="tel:9056077778"
+        backgroundImage="https://images.unsplash.com/photo-1743978432782-762c7a9b22a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwY2l0eSUyMGxpZ2h0c3xlbnwxfHx8fDE3NjIzNDcyNzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       />
 
       {/* Features */}

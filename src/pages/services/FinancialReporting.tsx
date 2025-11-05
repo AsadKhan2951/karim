@@ -1,4 +1,4 @@
-import Hero from '../../components/Hero';
+import InnerPageHero from '../../components/InnerPageHero';
 import ServiceIntro from '../../components/ServiceIntro';
 import { CheckCircle, BarChart3, FileText, PieChart, TrendingUp, Users, Award, Clock, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -38,13 +38,14 @@ export default function FinancialReporting() {
 
   return (
     <div>
-      <Hero
+      <InnerPageHero
         title="Financial Reporting Services"
         subtitle="Financial reports to guide decisions. We prepare clear, accurate financial statements that provide insights into your business performance and support informed decision-making."
         ctaText="Get Started"
         ctaLink="/contact"
-        image="https://images.unsplash.com/photo-1613316806864-86d8e77de03a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwZmluYW5jaWFsJTIwZGlzdHJpY3R8ZW58MXx8fHwxNzYyMTU2ODE4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-        compact
+        secondaryCtaText="(905) 607-7778"
+        secondaryCtaLink="tel:9056077778"
+        backgroundImage="https://images.unsplash.com/photo-1716892230094-7233225ab383?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwYnVpbGRpbmdzJTIwcGFub3JhbWF8ZW58MXx8fHwxNzYyMzQ3Mjc3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       />
 
       {/* Service Introduction - New Dynamic Section */}

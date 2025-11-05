@@ -169,30 +169,30 @@ export default function Home() {
       <HeroCarousel />
 
       {/* 02 - Why Choose Us */}
-      <section className="py-24 lg:py-32 bg-white">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="py-16 lg:py-24 xl:py-32 bg-white">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
             {/* Left - Image */}
             <AnimatedSection animation="slide-right">
               <div className="relative">
-                <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <div className="relative rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl">
                   <ImageWithFallback
                     src="https://images.unsplash.com/photo-1758518730384-be3d205838e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMGhhbmRzaGFrZSUyMGRlYWx8ZW58MXx8fHwxNzYyMTU4MzY2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                     alt="Professional Business Partnership"
-                    className="w-full h-[600px] object-cover"
+                    className="w-full h-[400px] md:h-[500px] lg:h-[550px] xl:h-[600px] object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1a1f5c]/30 to-transparent"></div>
                 </div>
                 
                 {/* Floating Stats */}
-                <div className="absolute -bottom-8 -left-8 bg-white rounded-2xl shadow-2xl p-6 hidden lg:block">
-                  <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 bg-[#1a1f5c] rounded-xl flex items-center justify-center">
-                      <CheckCircle className="w-8 h-8 text-white" />
+                <div className="absolute -bottom-6 lg:-bottom-8 -left-4 lg:-left-8 bg-white rounded-xl lg:rounded-2xl shadow-2xl p-4 lg:p-6 hidden md:block">
+                  <div className="flex items-center gap-3 lg:gap-4">
+                    <div className="w-12 h-12 lg:w-16 lg:h-16 bg-[#1a1f5c] rounded-lg lg:rounded-xl flex items-center justify-center">
+                      <CheckCircle className="w-6 h-6 lg:w-8 lg:h-8 text-white" />
                     </div>
                     <div>
-                      <div className="text-3xl text-[#1a1f5c] mb-1">100%</div>
-                      <p className="text-sm text-black/70">Client Satisfaction</p>
+                      <div className="text-2xl lg:text-3xl text-[#1a1f5c] mb-1">100%</div>
+                      <p className="text-xs lg:text-sm text-black/70">Client Satisfaction</p>
                     </div>
                   </div>
                 </div>
@@ -202,28 +202,28 @@ export default function Home() {
             {/* Right - Content */}
             <AnimatedSection animation="slide-left">
               <div>
-                <h2 className="text-[#1a1f5c] mb-6">
-                  Over 10 Years of Experience - Canadian CPA - Certified Accountants at Your Side
+                <h2 className="text-[#1a1f5c] mb-4 lg:mb-6 text-2xl sm:text-3xl lg:text-4xl">
+                  15+ Years of Experience • Canadian CPA • Your Trusted Accounting Partner
                 </h2>
-                <p className="text-black/80 text-lg leading-relaxed mb-10">
+                <p className="text-black/80 text-base lg:text-lg leading-relaxed mb-6 lg:mb-10">
                   We focus on your business needs to find solutions that fit best and drive measurable results.
                 </p>
 
                 {/* Features List */}
-                <div className="space-y-6">
+                <div className="space-y-4 lg:space-y-6">
                   {features.map((feature, index) => (
                     <div 
                       key={index} 
-                      className="flex items-start gap-4 p-5 rounded-xl bg-[#F5F7FA] hover:bg-white hover:shadow-lg transition-all duration-300 group"
+                      className="flex items-start gap-3 lg:gap-4 p-4 lg:p-5 rounded-lg lg:rounded-xl bg-[#F5F7FA] hover:bg-white hover:shadow-lg transition-all duration-300 group"
                     >
-                      <div className="w-14 h-14 bg-[#1a1f5c] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#2a3570] transition-colors duration-300">
-                        <feature.icon className="w-7 h-7 text-white" />
+                      <div className="w-12 h-12 lg:w-14 lg:h-14 bg-[#1a1f5c] rounded-lg lg:rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#2a3570] transition-colors duration-300">
+                        <feature.icon className="w-6 h-6 lg:w-7 lg:h-7 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-[#1a1f5c] mb-2 text-lg">
+                        <h3 className="text-[#1a1f5c] mb-1 lg:mb-2 text-base lg:text-lg">
                           {feature.title}
                         </h3>
-                        <p className="text-black/80 leading-relaxed">
+                        <p className="text-black/80 leading-relaxed text-sm lg:text-base">
                           {feature.description}
                         </p>
                       </div>
@@ -562,8 +562,8 @@ export default function Home() {
                 {[
                   { icon: Award, label: '15+ Years', sublabel: 'Experience' },
                   { icon: Users, label: '500+', sublabel: 'Happy Clients' },
-                  { icon: CheckCircle, label: '98%', sublabel: 'Satisfaction' },
-                  { icon: Clock, label: '24/7', sublabel: 'Support' },
+                  { icon: CheckCircle, label: '100%', sublabel: 'Satisfaction' },
+                  { icon: Clock, label: 'Mon-Fri', sublabel: '9AM - 5PM' },
                 ].map((badge, index) => (
                   <div key={index} className="text-center">
                     <badge.icon className="w-10 h-10 text-[#4a5591] mx-auto mb-3" />

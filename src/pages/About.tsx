@@ -1,6 +1,7 @@
-import Hero from '../components/Hero';
+import InnerPageHero from '../components/InnerPageHero';
 import { Target, Eye, Award, Users, CheckCircle, TrendingUp, Shield, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
 export default function About() {
   const values = [
@@ -61,11 +62,13 @@ export default function About() {
   return (
     <div>
       {/* Hero Section */}
-      <Hero
+      <InnerPageHero
         title="About Karim Accounting"
         subtitle="Your trusted partner for professional accounting services. We combine expertise, integrity, and innovation to deliver exceptional financial solutions that drive your success."
-        image="https://images.unsplash.com/photo-1713113310084-0d8eb4933ffd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwb2ZmaWNlJTIwYnVzaW5lc3MlMjBtZWV0aW5nfGVufDF8fHx8MTc2MjE1NjgxN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-        compact
+        ctaText="Schedule a Consultation"
+        ctaLink="/contact"
+        secondaryCtaText="(905) 607-7778"
+        secondaryCtaLink="tel:9056077778"
       />
 
       {/* Our Story */}
@@ -74,23 +77,20 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-gray-900 mb-6">Welcome to Karim Accounting</h2>
-              <div className="space-y-4 text-black/80">
+              <div className="space-y-6 text-black/80">
                 <p>
-                  At Karim Accounting, we believe that sound financial management is the foundation of every successful business and secure financial future. Our mission is to provide comprehensive accounting and financial services that go beyond numbers—we partner with you to build strategies that drive growth, ensure compliance, and create lasting financial success.
+                  At Karim Accounting, we're dedicated to helping individuals and businesses across Ontario build financial clarity and confidence. With over 15 years of experience in accounting, tax planning, and CRA representation, my team and I provide personalized, results-driven solutions that go beyond compliance. Whether it's managing your books, optimizing your tax strategy, or guiding you through a CRA audit or appeal, our goal is simple — to protect your interests, add value, and help you achieve lasting financial success.
                 </p>
-                <p>
-                  Whether you're a small business owner navigating your first tax season, a growing enterprise looking to scale, or an individual seeking to optimize your personal finances, we're here to guide you every step of the way.
-                </p>
-                <p>
-                  With a team of dedicated professionals and a commitment to excellence, we've built our reputation on trust, accuracy, and personalized service. We stay current with the latest regulations, technologies, and best practices to ensure you receive the most effective and efficient service possible.
+                <p className="text-[#1a1f5c] italic">
+                  — Ahmad Karim, MBA, CPA, TEP
                 </p>
               </div>
             </div>
             <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1663602003573-d2a029baa5fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwc2t5bGluZSUyMENOJTIwVG93ZXJ8ZW58MXx8fHwxNzYyMTYzMTkwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Toronto Skyline - Karim Accounting"
-                className="rounded-2xl shadow-xl"
+              <ImageWithFallback
+                src="/assets/ahmad-karim-headshot.jpg"
+                alt="Ahmad Karim - Karim Accounting"
+                className="rounded-2xl shadow-xl w-full h-auto object-cover"
               />
             </div>
           </div>

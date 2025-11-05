@@ -1,4 +1,4 @@
-import Hero from '../../components/Hero';
+import InnerPageHero from '../../components/InnerPageHero';
 import { CheckCircle, ClipboardList, Target, BarChart3, FileText, TrendingUp, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -37,13 +37,14 @@ export default function BusinessPlans() {
 
   return (
     <div>
-      <Hero
+      <InnerPageHero
         title="Business Plan Development"
         subtitle="Transform your business vision into a comprehensive, investor-ready plan. We create detailed business plans that secure funding, guide growth, and position your business for success."
         ctaText="Get Started"
         ctaLink="/contact"
-        image="https://images.unsplash.com/photo-1761818645907-8bed418b415b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDYW5hZGlhbiUyMHByb2Zlc3Npb25hbCUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjIxNTY4MTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-        compact
+        secondaryCtaText="(905) 607-7778"
+        secondaryCtaLink="tel:9056077778"
+        backgroundImage="https://images.unsplash.com/photo-1602513525551-87b56bf5e9a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwc2t5bGluZSUyMGxhbmRzY2FwZSUyMGNpdHlzY2FwZXxlbnwxfHx8fDE3NjIzNDY3MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       />
 
       {/* Features */}

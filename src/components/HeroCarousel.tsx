@@ -35,7 +35,7 @@ const slides: Slide[] = [
   {
     image:
       "https://images.unsplash.com/photo-1603466182843-75f713ba06b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwd2F0ZXJmcm9udCUyMGNpdHl8ZW58MXx8fHwxNzYyMTY5OTkzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    title: "Certified Canadian CPAs at Your Service",
+    title: "Professional Canadian CPAs at Your Service",
     subtitle:
       "Expert accounting and tax services for businesses across the Greater Toronto Area.",
     cta: {
@@ -46,9 +46,9 @@ const slides: Slide[] = [
   {
     image:
       "https://images.unsplash.com/photo-1609281238306-2f6729bbb965?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDYW5hZGElMjBmbGFnJTIwVG9yb250byUyMGNpdHlzY2FwZXxlbnwxfHx8fDE3NjIxNzYzMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-    title: "CRA Certified & Compliant Tax Services",
+    title: "Grow your business with proactive accounting.",
     subtitle:
-      "Navigate Canadian tax regulations with confidence. Our CRA-certified professionals ensure your returns are accurate, compliant, and optimized for maximum benefits.",
+      "Helping you stay ahead of financial challenges and seize every opportunity for growth.",
     cta: {
       text: "Get Tax Assistance",
       link: "/services/tax-filing",
@@ -349,7 +349,7 @@ export default function HeroCarousel() {
                       </div>
                       <div className="flex items-center gap-1">
                         <div className="w-1 h-1 bg-blue-400 rounded-full"></div>
-                        <span>24hr Response</span>
+                        <span>Free Consultation</span>
                       </div>
                     </div>
                   </div>

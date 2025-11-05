@@ -1,9 +1,12 @@
 import { ImageWithFallback } from '../../components/figma/ImageWithFallback';
 import AnimatedSection from '../../components/AnimatedSection';
 import ServiceIntro from '../../components/ServiceIntro';
+import InnerPageHero from '../../components/InnerPageHero';
 import { CheckCircle, FileText, Calculator, TrendingUp, Shield, Phone, Mail, ArrowRight, Download, ChevronRight, Clock, Users, Award, Target, Send, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { sendEmail } from '../../utils/emailService';
+import { toast } from 'sonner@2.0.3';
 
 export default function PersonalAccounting() {
   const [formData, setFormData] = useState({
@@ -14,6 +17,7 @@ export default function PersonalAccounting() {
   });
   
   const [showMobileServices, setShowMobileServices] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // All services for sidebar navigation
   const allServices = [
@@ -77,7 +81,7 @@ export default function PersonalAccounting() {
     },
     {
       icon: Award,
-      title: '98% Success Rate',
+      title: '100% Success Rate',
       description: 'Consistently helping clients maximize refunds and achieve goals',
     },
     {
@@ -87,43 +91,45 @@ export default function PersonalAccounting() {
     },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission
+    setIsSubmitting(true);
+
+    try {
+      const result = await sendEmail({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        service: 'Personal Accounting - Consultation Request',
+      });
+
+      if (result.success) {
+        toast.success(result.message);
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        toast.error(result.message);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast.error('Failed to send request. Please try calling us directly at (905) 607-7778');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div className="bg-white">
       {/* Hero/Banner Section */}
-      <section className="relative bg-[#1a1f5c] pt-28 md:pt-32 pb-16 md:pb-20 overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }}></div>
-        </div>
-
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
-          {/* Breadcrumb */}
-          <AnimatedSection animation="fade">
-            <nav className="flex items-center gap-2 text-xs sm:text-sm mb-4 sm:mb-6 text-white/70">
-              <Link to="/" className="hover:text-white transition-colors">Home</Link>
-              <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
-              <Link to="/#services" className="hover:text-white transition-colors">Services</Link>
-              <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
-              <span className="text-white truncate">Personal Accounting</span>
-            </nav>
-          </AnimatedSection>
-
-          <AnimatedSection animation="slide-up">
-            <h1 className="text-white max-w-3xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-              Personal Accounting Services
-            </h1>
-          </AnimatedSection>
-        </div>
-      </section>
+      <InnerPageHero
+        title="Personal Accounting Services"
+        subtitle="Expert personal accounting solutions designed to simplify your finances, maximize your tax returns, and help you achieve your financial goals with confidence."
+        ctaText="Get Started Today"
+        ctaLink="/contact"
+        secondaryCtaText="(905) 607-7778"
+        secondaryCtaLink="tel:9056077778"
+        backgroundImage="https://images.unsplash.com/photo-1674699244662-980de86e2bbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwbmlnaHQlMjBza3lsaW5lfGVufDF8fHx8MTc2MjM0NzI3M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      />
 
       {/* Main Content Section */}
       <section className="py-12 md:py-20 pb-24 md:pb-20">
@@ -222,9 +228,10 @@ export default function PersonalAccounting() {
                       </div>
                       <button
                         type="submit"
-                        className="w-full px-6 py-3 bg-gradient-to-r from-[#1a1f5c] to-[#2a3570] text-white rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group"
+                        disabled={isSubmitting}
+                        className="w-full px-6 py-3 bg-gradient-to-r from-[#1a1f5c] to-[#2a3570] text-white rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        <span>Send Message</span>
+                        <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                         <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </button>
                     </form>
@@ -302,8 +309,8 @@ export default function PersonalAccounting() {
                 stats={[
                   { icon: Users, value: '500+', label: 'Happy Clients' },
                   { icon: Award, value: '15+', label: 'Years Experience' },
-                  { icon: Target, value: '98%', label: 'Success Rate' },
-                  { icon: Clock, value: '24/7', label: 'Support Available' }
+                  { icon: Target, value: '100%', label: 'Success Rate' },
+                  { icon: Clock, value: 'Mon-Fri', label: '9AM - 5PM' }
                 ]}
               />
 
@@ -506,9 +513,10 @@ export default function PersonalAccounting() {
                       </div>
                       <button
                         type="submit"
-                        className="w-full px-6 py-4 bg-gradient-to-r from-[#1a1f5c] to-[#2a3570] text-white rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group active:scale-95"
+                        disabled={isSubmitting}
+                        className="w-full px-6 py-4 bg-gradient-to-r from-[#1a1f5c] to-[#2a3570] text-white rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        <span>Send Message</span>
+                        <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                         <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                       </button>
                     </form>

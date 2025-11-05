@@ -1,4 +1,4 @@
-import Hero from '../../components/Hero';
+import InnerPageHero from '../../components/InnerPageHero';
 import ServiceIntro from '../../components/ServiceIntro';
 import { CheckCircle, Calculator, FileText, BarChart3, TrendingUp, Shield, Clock, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -38,13 +38,14 @@ export default function FullCycleAccounting() {
 
   return (
     <div>
-      <Hero
+      <InnerPageHero
         title="Full Cycle Accounting Services"
         subtitle="Complete accounting from start to finish. We handle every step of the accounting cycle, ensuring accuracy, compliance, and financial clarity for your business."
         ctaText="Get Started"
         ctaLink="/contact"
-        image="https://images.unsplash.com/photo-1613155961736-d0782a58f170?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDYW5hZGlhbiUyMGJ1c2luZXNzJTIwYWNjb3VudGluZyUyMG9mZmljZXxlbnwxfHx8fDE3NjIxNTY4MTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-        compact
+        secondaryCtaText="(905) 607-7778"
+        secondaryCtaLink="tel:9056077778"
+        backgroundImage="https://images.unsplash.com/photo-1603466182843-75f713ba06b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwaGFyYm9yJTIwc2t5bGluZXxlbnwxfHx8fDE3NjIzNDcyNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       />
 
       {/* Service Introduction - New Dynamic Section */}

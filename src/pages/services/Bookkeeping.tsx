@@ -1,4 +1,4 @@
-import Hero from '../../components/Hero';
+import InnerPageHero from '../../components/InnerPageHero';
 import ServiceIntro from '../../components/ServiceIntro';
 import { CheckCircle, BookOpen, FileText, Database, TrendingUp, Calendar, Users, Award, Clock, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -39,13 +39,14 @@ export default function Bookkeeping() {
 
   return (
     <div>
-      <Hero
+      <InnerPageHero
         title="Professional Bookkeeping Services"
         subtitle="Keep your financial records organized and accurate with our expert bookkeeping services. We handle the details so you can focus on what matters most."
         ctaText="Get Started"
         ctaLink="/contact"
-        image="https://images.unsplash.com/photo-1654140140199-fd32282377ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwcHJvZmVzc2lvbmFsJTIwYWNjb3VudGluZyUyMHdvcmtzcGFjZSUyMGxhcHRvcHxlbnwxfHx8fDE3NjIxNTY5Mjh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-        compact
+        secondaryCtaText="(905) 607-7778"
+        secondaryCtaLink="tel:9056077778"
+        backgroundImage="https://images.unsplash.com/photo-1704925052413-f4b9a3d467f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwQ04lMjBUb3dlciUyMGV2ZW5pbmd8ZW58MXx8fHwxNzYyMzQ3Mjc0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       />
 
       {/* Service Introduction - New Dynamic Section */}

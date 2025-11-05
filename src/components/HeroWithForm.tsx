@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Send, Award, Users, TrendingUp, Sparkles, Shield } from 'lucide-react';
 import { toast } from 'sonner@2.0.3';
 import { motion } from 'motion/react';
+import { sendEmail } from '../utils/emailService';
 
 interface HeroWithFormProps {
   title: string;
@@ -22,17 +23,32 @@ export default function HeroWithForm({ title, subtitle }: HeroWithFormProps) {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    toast.success('Consultation request sent! We\'ll contact you within 24 hours.');
-    setFormData({
-      name: '',
-      email: '',
-      number: '',
-      service: '',
-    });
-    setIsSubmitting(false);
+    try {
+      const result = await sendEmail({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.number,
+        service: formData.service,
+        message: `Service requested: ${formData.service}\n\nThis is a consultation booking request from the homepage form.`,
+      });
+
+      if (result.success) {
+        toast.success('Consultation request sent! We\'ll contact you within 24 hours.');
+        setFormData({
+          name: '',
+          email: '',
+          number: '',
+          service: '',
+        });
+      } else {
+        toast.error(result.message);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast.error('Failed to send request. Please try calling us at (905) 607-7778');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -113,7 +129,7 @@ export default function HeroWithForm({ title, subtitle }: HeroWithFormProps) {
                   <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0">
                     <TrendingUp className="w-5 h-5 text-white" />
                   </div>
-                  <div className="text-2xl text-white">98%</div>
+                  <div className="text-2xl text-white">100%</div>
                 </div>
                 <div className="text-sm text-white/70">Satisfaction Rate</div>
               </motion.div>

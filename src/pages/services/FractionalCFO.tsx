@@ -1,4 +1,4 @@
-import Hero from '../../components/Hero';
+import InnerPageHero from '../../components/InnerPageHero';
 import ServiceIntro from '../../components/ServiceIntro';
 import { CheckCircle, CircleDollarSign, TrendingUp, BarChart3, Target, Users, Award, Clock, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -38,13 +38,14 @@ export default function FractionalCFO() {
 
   return (
     <div>
-      <Hero
+      <InnerPageHero
         title="Fractional CFO Services"
         subtitle="Part-time CFO for financial strategy. Get expert CFO-level guidance without the full-time cost. We provide strategic financial leadership to drive your business growth."
         ctaText="Get Started"
         ctaLink="/contact"
-        image="https://images.unsplash.com/photo-1698762954345-0c4d58f79b1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwQ04lMjBUb3dlciUyMGJ1c2luZXNzfGVufDF8fHx8MTc2MjE1NjgxOXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-        compact
+        secondaryCtaText="(905) 607-7778"
+        secondaryCtaLink="tel:9056077778"
+        backgroundImage="https://images.unsplash.com/photo-1632857997897-9418428d7368?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwbW9kZXJuJTIwc2t5bGluZXxlbnwxfHx8fDE3NjIzNDcyNzh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       />
 
       {/* Service Introduction - New Dynamic Section */}

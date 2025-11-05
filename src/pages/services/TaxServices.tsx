@@ -1,4 +1,4 @@
-import Hero from '../../components/Hero';
+import InnerPageHero from '../../components/InnerPageHero';
 import { CheckCircle, FileText, Shield, Calculator, TrendingDown, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -46,13 +46,14 @@ export default function TaxServices() {
 
   return (
     <div>
-      <Hero
+      <InnerPageHero
         title="Comprehensive Tax Services"
         subtitle="Strategic tax planning and expert preparation to minimize your tax liability while ensuring full compliance. Trust our experienced team to handle all your tax needs."
         ctaText="Get Started"
         ctaLink="/contact"
-        image="https://images.unsplash.com/photo-1586486855514-8c633cc6fd38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDYW5hZGlhbiUyMHRheCUyMGRvY3VtZW50cyUyMHBsYW5uaW5nfGVufDF8fHx8fDE3NjIxNTY4MjB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-        compact
+        secondaryCtaText="(905) 607-7778"
+        secondaryCtaLink="tel:9056077778"
+        backgroundImage="https://images.unsplash.com/photo-1596084953737-4127cba08687?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwZG93bnRvd24lMjBhcmNoaXRlY3R1cmV8ZW58MXx8fHwxNzYyMzQ3Mjc0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       />
 
       {/* Features */}

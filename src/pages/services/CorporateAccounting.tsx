@@ -1,4 +1,4 @@
-import Hero from '../../components/Hero';
+import InnerPageHero from '../../components/InnerPageHero';
 import { CheckCircle, Building2, BarChart, FileCheck, Users, DollarSign } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -37,13 +37,14 @@ export default function CorporateAccounting() {
 
   return (
     <div>
-      <Hero
+      <InnerPageHero
         title="Corporate Accounting Solutions"
         subtitle="Comprehensive accounting services for businesses of all sizes. From startups to established corporations, we provide the financial expertise you need to thrive."
         ctaText="Get Started"
         ctaLink="/contact"
-        image="https://images.unsplash.com/photo-1594837447247-8bfc126ff9d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwc2t5bGluZSUyMGJ1c2luZXNzJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc2MjE1NjgxNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-        compact
+        secondaryCtaText="(905) 607-7778"
+        secondaryCtaLink="tel:9056077778"
+        backgroundImage="https://images.unsplash.com/photo-1622217122667-701eff45443c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwd2F0ZXJmcm9udCUyMGNpdHlzY2FwZXxlbnwxfHx8fDE3NjIzNDcyNzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       />
 
       {/* Features */}

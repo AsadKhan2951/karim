@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { sendEmail } from '../utils/emailService';
+import { toast } from 'sonner@2.0.3';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -9,13 +12,33 @@ export default function Contact() {
     subject: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      const result = await sendEmail({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        subject: formData.subject,
+        message: formData.message,
+      });
+
+      if (result.success) {
+        toast.success(result.message);
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+      } else {
+        toast.error(result.message);
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast.error('Failed to send message. Please try calling us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -28,12 +51,20 @@ export default function Contact() {
   return (
     <div>
       {/* Hero */}
-      <div className="bg-gradient-to-br from-blue-50 to-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-gray-900 mb-4">Contact Us</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Have questions? We're here to help. Reach out to us and we'll respond as soon as possible.
-          </p>
+      <div className="relative h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+        <ImageWithFallback
+          src="https://images.unsplash.com/photo-1746458695659-3de733bf50eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwc2t5bGluZSUyMENOJTIwVG93ZXIlMjBwYW5vcmFtaWN8ZW58MXx8fHwxNzYyMjgzODY3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          alt="Toronto Skyline"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1a1f5c]/90 via-[#1a1f5c]/70 to-[#1a1f5c]/50"></div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-white mb-4 md:mb-6 text-4xl md:text-5xl lg:text-6xl">Contact Us</h1>
+            <p className="text-white/90 max-w-2xl mx-auto text-lg md:text-xl">
+              Have questions? We're here to help. Reach out to us and we'll respond as soon as possible.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -191,9 +222,10 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full bg-[#1a1f5c] text-white px-8 py-4 rounded-lg hover:bg-[#2a3570] transition-colors shadow-md hover:shadow-lg"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#1a1f5c] text-white px-8 py-4 rounded-lg hover:bg-[#2a3570] transition-colors shadow-md hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>

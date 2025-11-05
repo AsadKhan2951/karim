@@ -1,4 +1,4 @@
-import Hero from '../../components/Hero';
+import InnerPageHero from '../../components/InnerPageHero';
 import { CheckCircle, TrendingUp, Target, Lightbulb, BarChart3, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -46,13 +46,14 @@ export default function ConsultingAdvisory() {
 
   return (
     <div>
-      <Hero
+      <InnerPageHero
         title="Consulting & Advisory Services"
         subtitle="Strategic financial guidance to help your business thrive. Our experienced consultants provide insights and solutions tailored to your unique challenges and opportunities."
         ctaText="Get Started"
         ctaLink="/contact"
-        image="https://images.unsplash.com/photo-1713113310084-0d8eb4933ffd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwb2ZmaWNlJTIwYnVzaW5lc3MlMjBtZWV0aW5nfGVufDF8fHx8MTc2MjE1NjgxN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-        compact
+        secondaryCtaText="(905) 607-7778"
+        secondaryCtaLink="tel:9056077778"
+        backgroundImage="https://images.unsplash.com/photo-1603466184602-1915265e1142?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxUb3JvbnRvJTIwY2l0eSUyMGFlcmlhbHxlbnwxfHx8fDE3NjIzNDcyNzV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
       />
 
       {/* Features */}
