@@ -2,6 +2,7 @@ import InnerPageHero from '../components/InnerPageHero';
 import { Target, Eye, Award, Users, CheckCircle, TrendingUp, Shield, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import KarimHeadImg from '../assets/ahmad-karim-headshot.jpg';
 
 export default function About() {
   const values = [
@@ -87,8 +88,8 @@ export default function About() {
               </div>
             </div>
             <div className="relative">
-              <ImageWithFallback
-                src="/assets/ahmad-karim-headshot.jpg"
+              <img
+                src={KarimHeadImg}
                 alt="Ahmad Karim - Karim Accounting"
                 className="rounded-2xl shadow-xl w-full h-auto object-cover"
               />
