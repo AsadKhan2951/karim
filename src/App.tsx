@@ -16,10 +16,12 @@ import FinanceEstate from './pages/business/FinanceEstate';
 import BusinessPlans from './pages/business/BusinessPlans';
 import Resources from './pages/Resources';
 import Contact from './pages/Contact';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col">
         <Navigation />
         <main className="flex-grow pb-20 lg:pb-0">
