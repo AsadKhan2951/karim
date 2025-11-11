@@ -5,9 +5,9 @@
 // 3. Create an email template
 // 4. Replace the IDs below with your actual values from EmailJS dashboard
 
-const EMAILJS_SERVICE_ID = 'service_y5pling'; // Replace with your EmailJS Service ID
-const EMAILJS_TEMPLATE_ID = 'template_vatksk8'; // Replace with your EmailJS Template ID
-const EMAILJS_PUBLIC_KEY = 'J_vfowqtQ5Ca40_5m'; // Replace with your EmailJS Public Key
+const EMAILJS_SERVICE_ID = 'service_4vzhohp'; // Replace with your EmailJS Service ID
+const EMAILJS_TEMPLATE_ID = 'template_rkf9tnb'; // Replace with your EmailJS Template ID
+const EMAILJS_PUBLIC_KEY = 'y6WlCmfKmeFIT51xw'; // Replace with your EmailJS Public Key
 
 interface EmailData {
   name: string;
