@@ -130,7 +130,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-[#2a3570] mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 Karim Accounting. All rights reserved. | Powered by <a href="https://zettamight.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">Zettamight (rad.)</a></p>
+          <p>&copy; 2025 Karim Accounting. All rights reserved.</p>
         </div>
       </div>
     </footer>
