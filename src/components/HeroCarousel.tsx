@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import AnimatedSection from "./AnimatedSection";
+import DynamicForm from "./DynamicForm";
 
 interface Slide {
   image: string;
@@ -232,11 +233,11 @@ export default function HeroCarousel() {
                 </div>
 
                 {/* Form Fields */}
-                <form
+                <DynamicForm />
+                {/* <form
                   className="space-y-2 lg:space-y-2.5"
                   onSubmit={(e) => e.preventDefault()}
                 >
-                  {/* Name Field */}
                   <div>
                     <input
                       type="text"
@@ -247,7 +248,6 @@ export default function HeroCarousel() {
                     />
                   </div>
 
-                  {/* Email Field */}
                   <div>
                     <input
                       type="email"
@@ -258,7 +258,6 @@ export default function HeroCarousel() {
                     />
                   </div>
 
-                  {/* Phone Field */}
                   <div>
                     <input
                       type="tel"
@@ -268,7 +267,6 @@ export default function HeroCarousel() {
                     />
                   </div>
 
-                  {/* Service Selection */}
                   <div>
                     <select
                       id="service"
@@ -331,7 +329,6 @@ export default function HeroCarousel() {
                     </select>
                   </div>
 
-                  {/* Submit Button */}
                   <button
                     type="submit"
                     className="w-full bg-white text-[#1a1f5c] py-2 lg:py-2.5 rounded-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] group flex items-center justify-center gap-1.5 text-[11px] lg:text-xs mt-2 lg:mt-3 touch-manipulation"
@@ -340,7 +337,6 @@ export default function HeroCarousel() {
                     <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                   </button>
 
-                  {/* Trust Indicators */}
                   <div className="pt-2 lg:pt-2.5 border-t border-white/20">
                     <div className="flex items-center justify-center gap-2 text-[10px] lg:text-xs text-white/70 flex-wrap">
                       <div className="flex items-center gap-1">
@@ -353,7 +349,7 @@ export default function HeroCarousel() {
                       </div>
                     </div>
                   </div>
-                </form>
+                </form> */}
               </div>
 
               {/* Decorative Elements */}

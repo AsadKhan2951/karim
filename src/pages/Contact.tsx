@@ -237,6 +237,7 @@ export default function Contact() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gray-300 rounded-2xl overflow-hidden" style={{ height: '400px' }}>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5785.271178516266!2d-79.68149735608858!3d43.530791312907326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b43c9a8eec79d%3A0x3fdd44e43f686db1!2sKarim%20Accounting%20Services!5e0!3m2!1sen!2s!4v1762981775040!5m2!1sen!2s" width="100%" height="450"  allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div className="w-full h-full flex items-center justify-center text-gray-600">
               {/* Placeholder for map - replace with actual map integration */}
               <div className="text-center">
