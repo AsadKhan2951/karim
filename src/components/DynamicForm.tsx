@@ -50,7 +50,7 @@ export default function DynamicForm() {
   return (
     <form className="space-y-6" onSubmit={handleSubmit}>
       {/* Full Name */}
-      <div>
+      <div className="mb-3 lg:mb-3">
         <input
           type="text"
           id="name"
@@ -64,7 +64,7 @@ export default function DynamicForm() {
       </div>
 
       {/* Email Address */}
-      <div>
+      <div className="mb-3 lg:mb-3">
         <input
           type="email"
           id="email"
@@ -78,7 +78,7 @@ export default function DynamicForm() {
       </div>
 
       {/* Phone Number */}
-      <div>
+      <div className="mb-3 lg:mb-3">
         <input
           type="tel"
           id="phone"
@@ -91,7 +91,7 @@ export default function DynamicForm() {
       </div>
 
       {/* Service Selection */}
-      <div>
+      <div className="mb-3 lg:mb-3">
         <select
           id="service"
           name="service"
@@ -121,7 +121,7 @@ export default function DynamicForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-white text-[#1a1f5c] py-2 lg:py-2.5 rounded-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] group flex items-center justify-center gap-1.5 text-[11px] lg:text-xs mt-2 lg:mt-3 touch-manipulation"
+        className="mb-3 lg:mb-3 w-full bg-white text-[#1a1f5c] py-2 lg:py-2.5 rounded-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] group flex items-center justify-center gap-1.5 text-[11px] lg:text-xs mt-2 lg:mt-3 touch-manipulation"
         >
         <span>{isSubmitting ? 'Sending...' : 'Get Free Consultation'}</span>
         <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
